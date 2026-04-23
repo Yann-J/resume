@@ -1,0 +1,32 @@
+categories:
+  - name: DevOps and Cloud Operations
+    rating: 5
+    technologies:
+      - Kubernetes
+      - Helm
+      - CI/CD
+      - Elastic
+  - name: Design and Architecture
+    rating: 5
+    technologies:
+      - Technology selection
+      - Systems integration
+  - name: Software Quality
+    rating: 5
+    technologies:
+      - NFR design
+      - Test automation
+      - Secure coding practices
+  - name: Building Teams and Organizations
+    rating: 5
+    technologies:
+      - Hiring and coaching
+      - Process improvement
+      - Engineering governance
+  - name: AI Models and Automation
+    rating: 4
+    technologies:
+      - PyTorch
+      - LangChain
+      - n8n
+      - Workflow automation
