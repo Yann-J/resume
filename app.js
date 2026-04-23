@@ -100,12 +100,21 @@ function renderIdentity(profile) {
 
 function renderContact(contact) {
   const target = document.getElementById("contact");
+  const website = contact.website
+    ? `<p class="contact-row"><i class="bi bi-globe2" aria-hidden="true"></i> <a href="${
+        String(contact.website).startsWith("http")
+          ? contact.website
+          : `https://${contact.website}`
+      }" target="_blank" rel="noreferrer">${contact.website}</a></p>`
+    : "";
+
   target.innerHTML = `
     <p class="contact-row"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> ${contact.location}</p>
     <p class="contact-row"><i class="bi bi-telephone-fill" aria-hidden="true"></i> ${contact.phone}</p>
     <p class="contact-row"><i class="bi bi-envelope-fill" aria-hidden="true"></i> <a href="mailto:${contact.email}">${contact.email}</a></p>
     <p class="contact-row"><i class="bi bi-linkedin" aria-hidden="true"></i> <a href="https://linkedin.com/in/${contact.linkedin}/" target="_blank" rel="noreferrer">${contact.linkedin}</a></p>
     <p class="contact-row"><i class="bi bi-github" aria-hidden="true"></i> <a href="https://github.com/${contact.github}/" target="_blank" rel="noreferrer">${contact.github}</a></p>
+    ${website}
   `;
 }
 
@@ -214,8 +223,8 @@ function renderExperience(experience) {
       <article class="experience-item">
         <div class="experience-header">
           <div class="experience-main">
-            <h3 class="experience-title markdown">${markdownInline(item.title)} - ${markdownInline(item.company)}</h3>
             ${item.logo ? `<img class="company-logo" src="${item.logo}" alt="${item.company} logo" />` : ""}
+            <h3 class="experience-title markdown">${markdownInline(item.title)} - ${markdownInline(item.company)}</h3>
           </div>
           <span class="period markdown">${markdownInline(item.period)}</span>
         </div>
@@ -270,7 +279,7 @@ async function bootstrap() {
     renderExperience(experience);
     renderSimpleList(
       "entrepreneurship",
-      "Entrepreneurship",
+      "Entrepreneurship & Side Projects",
       "rocket",
       entrepreneurship.items,
     );
