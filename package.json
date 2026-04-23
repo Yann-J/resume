@@ -1,0 +1,25 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "See the results live at",
+  "main": "app.js",
+  "scripts": {
+    "export:pdf": "node ./scripts/export-pdf.mjs",
+    "test": "echo \"No tests configured\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yann-J/resume.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Yann-J/resume/issues"
+  },
+  "homepage": "https://github.com/Yann-J/resume#readme",
+  "devDependencies": {
+    "playwright": "^1.59.1"
+  }
+}

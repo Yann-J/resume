@@ -1,0 +1,45 @@
+name: Export Resume PDF
+
+on:
+  push:
+    branches: ["main"]
+    paths-ignore:
+      - "resume.pdf"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Export PDF
+        run: npm run export:pdf
+
+      - name: Commit PDF if changed
+        run: |
+          if git diff --quiet -- resume.pdf; then
+            echo "No PDF change detected."
+            exit 0
+          fi
+          git add resume.pdf
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "chore: update generated resume PDF"
+          git push

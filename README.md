@@ -16,6 +16,18 @@ python3 -m http.server 8000
 
 Open [http://localhost:8000](http://localhost:8000)
 
+## PDF export
+
+Generate a print-accurate PDF locally with Playwright:
+
+```bash
+npm install
+npx playwright install chromium
+npm run export:pdf
+```
+
+This creates `resume.pdf` at the repository root.
+
 ## Content updates
 
 Edit YAML files in `data/`:
