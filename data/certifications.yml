@@ -9,9 +9,9 @@ rows:
     url: https://badge.trueability.com/issued_certifications/EzdDGL8kmxl.html
   - title: Stanford XCS236 - Deep Generative Models
     year: "2025"
-    badge: ./assets/badges/xcs236.svg
+    badge: ./assets/badges/XCS236.svg
     url: https://digitalcredential.stanford.edu/check/7483760C566330F6521CD8C120B3081A914481C25AE665B9116F69E53F963856QmZNcHpnY3NQVnNMOHhXRjAraktIWG9ZUDNINzZTSG5pRmttczBHRWRhNTJGaS8r
   - title: Stanford XCS224R - Deep Reinforcement Learning
     year: "2026"
-    badge: ./assets/badges/xcs224r.svg
+    badge: ./assets/badges/XCS224R.svg
     url: https://digitalcredential.stanford.edu/check/B292F634C9E029D15DDEC09E41EEE4C0BD530FC1EBF9A0883544731EDE16BE72cy9ZQjNTYk50dTZRWWp0SDRWSlVLUjBJM2JYeTFlOVhvK1V3ZU5NRjBBbnNzMWVq

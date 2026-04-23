@@ -1,5 +1,7 @@
 # Yann Jouanique - Online Resume
 
+See the results live at
+
 This project is a static website designed for GitHub Pages.
 All resume content is stored in YAML files under `data/` and rendered in the browser.
 Text fields are parsed as Markdown, so links and formatting can live directly in YAML.
