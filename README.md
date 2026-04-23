@@ -28,6 +28,9 @@ npm run export:pdf
 
 This creates `resume.pdf` at the repository root.
 
+On every push to `main`, GitHub Actions also regenerates the PDF and publishes it
+to the GitHub Release tagged `resume-pdf-latest`.
+
 ## Content updates
 
 Edit YAML files in `data/`:

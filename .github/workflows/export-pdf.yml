@@ -3,8 +3,6 @@ name: Export Resume PDF
 on:
   push:
     branches: ["main"]
-    paths-ignore:
-      - "resume.pdf"
   workflow_dispatch:
 
 permissions:
@@ -34,12 +32,15 @@ jobs:
       - name: Export PDF
         run: npm run export:pdf
 
-      - name: Commit PDF if changed
-        run: |
-          if git diff --quiet -- resume.pdf; then
-            echo "No PDF change detected."
-            exit 0
-          fi
-          git add resume.pdf
-          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "chore: update generated resume PDF"
-          git push
+      - name: Publish PDF as GitHub Release asset
+        uses: ncipollo/release-action@v1
+        with:
+          tag: resume-pdf-latest
+          name: Resume PDF (latest)
+          body: |
+            Automatically generated resume PDF from the latest `main` commit.
+            Source commit: ${{ github.sha }}
+          prerelease: false
+          allowUpdates: true
+          replacesArtifacts: true
+          artifacts: resume.pdf
