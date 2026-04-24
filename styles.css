@@ -111,7 +111,8 @@ body {
 
 .panel a {
   color: #bfdbfe;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 0.08em;
 }
 
 .contact-row {
@@ -316,7 +317,8 @@ body {
 
 .cert-description a {
   color: var(--accent);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 0.08em;
 }
 
 .cert-year {
@@ -442,7 +444,8 @@ body {
   }
 
   .experience-item {
-    margin-bottom: 0.42rem;
+    margin-bottom: 0.72rem;
+    padding-bottom: 0.08rem;
   }
 
   .experience-title {

@@ -10,11 +10,11 @@ categories:
   - name: Design and Architecture
     rating: 8
     technologies:
-      - Python
-      - JavaScript
       - Technology selection
       - Systems integration
-      - Microservices
+      - Solution Design
+      - Python
+      - JavaScript
   - name: Building Teams and Organizations
     rating: 8
     technologies:
