@@ -50,17 +50,31 @@ function markdown(content) {
   if (content === null || content === undefined) {
     return "";
   }
-  return window.marked.parse(String(content), { breaks: true, gfm: true });
+  return decorateMarkdownLinks(
+    window.marked.parse(String(content), { breaks: true, gfm: true }),
+  );
 }
 
 function markdownInline(content) {
   if (content === null || content === undefined) {
     return "";
   }
-  return window.marked.parseInline(String(content), {
-    breaks: true,
-    gfm: true,
+  return decorateMarkdownLinks(
+    window.marked.parseInline(String(content), {
+      breaks: true,
+      gfm: true,
+    }),
+  );
+}
+
+function decorateMarkdownLinks(html) {
+  const container = document.createElement("div");
+  container.innerHTML = html;
+  container.querySelectorAll("a[href]").forEach((anchor) => {
+    anchor.setAttribute("target", "_blank");
+    anchor.setAttribute("rel", "noopener noreferrer");
   });
+  return container.innerHTML;
 }
 
 function sectionHeader(title, iconName) {

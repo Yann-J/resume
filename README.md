@@ -1,6 +1,6 @@
 # Yann Jouanique - Online Resume
 
-See the results live at
+See the results live at <https://yann-j.github.io/resume/>
 
 This project is a static website designed for GitHub Pages.
 All resume content is stored in YAML files under `data/` and rendered in the browser.
