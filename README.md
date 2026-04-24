@@ -27,6 +27,7 @@ npm run export:pdf
 ```
 
 This creates `resume.pdf` at the repository root.
+Set `PDF_FILENAME` to customize the output name (for example, `PDF_FILENAME="Yann Jouanique.pdf" npm run export:pdf`).
 
 On every push to `main`, GitHub Actions also regenerates the PDF and publishes it
 to the GitHub Release tagged `resume-pdf-latest`.

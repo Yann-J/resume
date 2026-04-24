@@ -376,7 +376,7 @@ body {
   body {
     margin: 0;
     font-size: 8.4pt;
-    line-height: 1.2;
+    line-height: 1.28;
   }
 
   .layout {
@@ -396,7 +396,7 @@ body {
   }
 
   .content {
-    padding: 6mm 4.5mm;
+    padding: 7mm 5mm;
   }
 
   .identity h1 {
@@ -415,13 +415,13 @@ body {
   }
 
   .panel {
-    margin-top: 0.65rem;
+    margin-top: 0.85rem;
   }
 
   .panel h2,
   .content-section h2 {
-    margin-top: 0.12rem;
-    margin-bottom: 0.42rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.55rem;
     font-size: 0.7rem;
     letter-spacing: 0.04em;
     line-height: 1.28;
@@ -460,6 +460,7 @@ body {
 
   .company-logo {
     max-width: 72px;
+    transform: translateY(-1px);
   }
 
   .experience-description ul,
@@ -537,8 +538,8 @@ body {
   }
 
   .content-section {
-    padding: 0 0 0.45rem;
-    margin-bottom: 0.45rem;
+    padding: 0.08rem 0 0.62rem;
+    margin-bottom: 0.62rem;
   }
 
   .layout,

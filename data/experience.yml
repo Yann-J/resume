@@ -7,46 +7,49 @@ items:
     description: |
       On a mission to restructure tech teams, modernize legacy platforms, and support digital transformation and AgTech strategy
 
-      - **Restructured and expanded the team** from around 10 to 65 engineers
+      - **Restructured and expanded the team** from around 10 to 65+ engineers
       - **Led modernization of legacy solutions to a cloud-based open-source stack** across 8 African countries, based on Odoo | Fineract | Keycloak | Payment Hub | ODK
       - **Rolled out BI and analytics platform** Snowflake | Airbyte | Superset
-      - **Built DevOps operations around CI/CD, Kubernetes, and observability** for 500+ containers
+      - **Built DevOps operations around CI/CD, Kubernetes, and observability** for 800+ containers
+
   - title: "**Head of Bespoke Developments** APAC"
     company: Amadeus
     logo: ./assets/logos/amadeus.png
     period: "2016 - 2019"
     location: "🇹🇭 Bangkok, Thailand"
     description: |
-      Took over distributed teams of around 50 developers across Asia during major transformations
+      **Lead distributed team of ~50 developers** across Asia during major transformations
 
       - Restructured development locations from 7 to 3 sites and increased automation
-      - Led stack modernization initiatives, including Docker and Angular migrations
+      - Led **stack modernization** initiatives, including Docker and Angular migrations
+
   - title: "**Senior Manager**, Flight Management, Airport IT"
     company: Amadeus
     logo: ./assets/logos/amadeus.png
     period: "2012 - 2016"
     location: "🇫🇷 Sophia-Antipolis, France then 🇸🇬 Singapore"
     description: |
-      Directed development of core Airport Systems components
+      Directed development of **mission-critical Airport Systems components** running in 10+ major airports
 
       - Scaled teams from 8 to 50+ in France, Singapore and India with fast delivery cycles
       - Supported post-acquisition integration and technology harmonization
+
   - title: "**Manager**"
     company: Ness Technologies (for Amadeus)
     logo: ./assets/logos/amadeus.png
     period: "2008 - 2012"
     location: "🇮🇳 Bangalore, India"
     description: |
-      Contributed to growth of the first Amadeus development center in India from 20 to 500+ staff
+      Contributed to growth of the **first Amadeus development center in India** from 20 to 500+ staff
 
-      - Led infrastructure integration and provided technology and process coaching
-      - Played a key role in launching high-profile projects including a first mobile competency center
+      - Led **infrastructure integration** and provided **technology and process coaching**
+      - Played a key role in launching high-profile projects including a **first mobile competency center**
   - title: "**DevOps Engineer**, then **Architect**"
     company: Amadeus
     logo: ./assets/logos/amadeus.png
     period: "2002 - 2008"
     location: "🇫🇷 Sophia-Antipolis, France"
     description: |
-      Provided technical consultancy and cross-division coordination for large programs
+      Provided **technical consultancy** and **cross-division coordination** for large programs
 
       - Built strong foundations in architecture, platform reliability, and delivery governance

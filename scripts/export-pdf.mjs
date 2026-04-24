@@ -8,9 +8,9 @@ import { chromium } from "playwright";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, "..");
-const OUTPUT_PDF = path.resolve(ROOT_DIR, "resume.pdf");
+const outputFileName = process.env.PDF_FILENAME || "resume.pdf";
+const OUTPUT_PDF = path.resolve(ROOT_DIR, outputFileName);
 const HOST = "127.0.0.1";
-const PORT = 4173;
 
 const MIME_TYPES = {
   ".html": "text/html; charset=utf-8",
@@ -70,23 +70,31 @@ function startServer() {
       });
     });
 
-    server.listen(PORT, HOST, () => resolve(server));
+    server.listen(0, HOST, () => {
+      const address = server.address();
+      if (!address || typeof address === "string") {
+        throw new Error("Unable to determine export server address");
+      }
+      resolve({ server, port: address.port });
+    });
   });
 }
 
 async function exportPdf() {
-  const server = await startServer();
+  const { server, port } = await startServer();
   let browser;
 
   try {
     browser = await chromium.launch({ headless: true });
     const page = await browser.newPage();
-    await page.goto(`http://${HOST}:${PORT}/`, { waitUntil: "networkidle" });
+    await page.goto(`http://${HOST}:${port}/`, { waitUntil: "networkidle" });
     await page.emulateMedia({ media: "print" });
     await page.pdf({
       path: OUTPUT_PDF,
       printBackground: true,
       preferCSSPageSize: true,
+      tagged: true,
+      outline: true,
     });
     console.log(`PDF exported: ${OUTPUT_PDF}`);
   } finally {
