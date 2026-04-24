@@ -145,7 +145,7 @@ body {
 }
 
 .content-section p {
-  margin: 0.5rem 0;
+  margin: 0 0 0.5rem 0;
   color: var(--muted);
 }
 
@@ -162,7 +162,7 @@ body {
 .experience-header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-start;
   gap: var(--space-2);
   flex-wrap: wrap;
 }
@@ -181,12 +181,14 @@ body {
   object-fit: contain;
   background: transparent;
   border: 0;
+  transform: translateY(-3px);
 }
 
 .experience-title {
   margin: 0;
   font-size: 1.05rem;
   color: var(--ink);
+  font-weight: normal;
 }
 
 .experience-meta {
@@ -212,6 +214,15 @@ body {
 .bullets li {
   margin: 0.35rem 0;
   color: var(--muted);
+}
+
+#entrepreneurship .bullets {
+  columns: 2;
+  column-gap: 1.5rem;
+}
+
+#entrepreneurship .bullets li {
+  break-inside: avoid-column;
 }
 
 .panel .bullets li {

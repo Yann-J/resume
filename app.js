@@ -224,7 +224,7 @@ function renderExperience(experience) {
         <div class="experience-header">
           <div class="experience-main">
             ${item.logo ? `<img class="company-logo" src="${item.logo}" alt="${item.company} logo" />` : ""}
-            <h3 class="experience-title markdown">${markdownInline(item.title)} - ${markdownInline(item.company)}</h3>
+            <h3 class="experience-title markdown">${markdownInline(item.title)}</h3>
           </div>
           <span class="period markdown">${markdownInline(item.period)}</span>
         </div>
